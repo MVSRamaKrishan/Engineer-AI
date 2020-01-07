@@ -1,0 +1,31 @@
+table {
+    border-collapse:separate;
+    border:solid black 1px;
+    border-radius:6px;
+    -moz-border-radius:6px;
+    
+}
+
+td, th {
+    border-left:solid black 1px;
+    border-top:solid black 1px;
+    width:150px; 
+    text-align:center; 
+    border:1px solid black; 
+    padding:5px 
+}
+
+th {
+    height: 50px;
+    background-color: blue;
+    border-top: none;
+    width:150px; 
+    text-align:center; 
+    border:1px solid black; 
+    padding:5px 
+}
+
+td:first-child, th:first-child {
+     border-left: none;
+}
+  

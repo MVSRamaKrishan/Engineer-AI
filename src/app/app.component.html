@@ -1,0 +1,30 @@
+<div class="container">
+  <!-- Table -->
+  <table>
+    <tr>
+      <th style="background-color:skyblue">Title</th>
+      <th style="background-color:skyblue">Url</th>
+      <th  style="background-color:skyblue">Created At</th>
+      <th  style="background-color:skyblue">Author</th>
+    </tr>
+    <tr *ngFor="let data of result" (click)="openModal(template)">
+      <td style="background-color:papayawhip">{{data.title}}</td>
+      <td style="background-color:papayawhip">{{data.url}}</td>
+      <td style="background-color:papayawhip">{{data.created_at}}</td>
+      <td style="background-color:papayawhip">{{data.author}}</td>
+      <!-- Modal -->
+      <ng-template #template>
+        <div class="modal-header">
+          <h2 class="modal-title">Raw Json Data</h2>
+          <button type="button" class="close pull-right" (click)="modalRef.hide()">X</button>
+        </div>
+        <div class="modal-body">
+          <pre  style="background-color:silver">{{data|json}}</pre>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" (click)="modalRef.hide()">close</button>
+        </div>
+      </ng-template>
+    </tr>
+  </table>
+</div>
